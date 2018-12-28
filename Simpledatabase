@@ -22,7 +22,10 @@ def Register():
      labelx = tk.Label(top, text="password", fg='black').grid(row=1)
      entry = tk.Entry(top).grid(row=1,column=1)
 
-
+     def logreturn():
+        root.deiconify()
+        top.destroy()
+     butre = tk.Button(top,text="Go back to Login",command=logreturn).grid(row=3, column=1, pady=4)
 
 
 but1 = tk.Button(root, text='Register',command=Register).grid(row=3, column=1, pady=4)
