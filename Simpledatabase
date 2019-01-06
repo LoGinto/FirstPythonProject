@@ -10,8 +10,10 @@ label3.grid(row=0)
 label2.grid(row=1)
 entry_1.grid(row=0, column=1)
 entry_2.grid(row=1, column=1)
-
-workerlist = [[],[],[]]
+worker1 ={}
+worker2 = {}
+worker3 = {}
+workerlist = [worker1,worker2,worker3]
 
 
 
@@ -32,12 +34,20 @@ def Register():
      identer = tk.Entry(top).grid(row=3,column=1)
      def publish():
          global workerlist
+         global worker1
+         global worker2
+         global worker3
          x = entry.get()
          y = entryy.get()
-         identif = identer.get()
-         #global x,y,identif
-         workerlist[identif] = x,y
-         print(workerlist)
+         identif = int(identer.get())
+         ix = int((identif))
+         if identif == workerlist[ix]:
+             
+
+
+
+
+
 
 
 
