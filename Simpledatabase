@@ -10,7 +10,12 @@ label3.grid(row=0)
 label2.grid(row=1)
 entry_1.grid(row=0, column=1)
 entry_2.grid(row=1, column=1)
-worker1 = {'Name': 'Passwardo', 'age': 25, 'obligations': ['create a program', 'learn computer Science']}
+
+workerlist = [[],[],[]]
+
+
+
+
 
 
 def Register():
@@ -20,13 +25,29 @@ def Register():
      label = tk.Label(top, text="Name", fg='black').grid(row=0)
      entry = tk.Entry(top).grid(row=0,column=1)
      labelx = tk.Label(top, text="password", fg='black').grid(row=1)
-     entry = tk.Entry(top).grid(row=1,column=1)
+     entryy = tk.Entry(top).grid(row=1,column=1)
+     labeltest = tk.Label(top, text="Age", fg='black').grid(row=2)
+     entry45 = tk.Entry(top).grid(row=2,column=1)
+     labelid = tk.Label(top,text="Your ID:",fg='red').grid(row=3)
+     identer = tk.Entry(top).grid(row=3,column=1)
+     def publish():
+         global workerlist
+         x = entry.get()
+         y = entryy.get()
+         identif = identer.get()
+         #global x,y,identif
+         workerlist[identif] = x,y
+         print(workerlist)
+
+
+
+
 
      def logreturn():
         root.deiconify()
         top.destroy()
-     butre = tk.Button(top,text="Go back to Login",command=logreturn).grid(row=3, column=1, pady=4)
-
+     butre = tk.Button(top,text="Go back to Login",command=logreturn).grid(row=4, column=1, pady=4)
+     submit = tk.Button(top,text='submit').grid(row=5,column=1,pady=4)
 
 but1 = tk.Button(root, text='Register',command=Register).grid(row=3, column=1, pady=4)
 
