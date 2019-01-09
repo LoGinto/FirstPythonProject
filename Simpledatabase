@@ -10,11 +10,20 @@ label3.grid(row=0)
 label2.grid(row=1)
 entry_1.grid(row=0, column=1)
 entry_2.grid(row=1, column=1)
-worker1 ={}
-worker2 = {}
-worker3 = {}
-workerlist = [worker1,worker2,worker3]
+userspass = {
+ 'user1':'pass1',
+ 'user2':'pass2',
+ 'user3':'pass3'
+ }
 
+def validate_user(userpass,username,password):
+    if (getentry1, getentry2) in userpass.items():
+        return 1
+    else:
+        return 0
+
+validate_user(userspass,'getentry1','getentry2')
+but1 = tk.Button(root, text='Login',command=validate_user).grid(row=2, column=1, pady=2)
 
 
 
@@ -33,15 +42,7 @@ def Register():
      labelid = tk.Label(top,text="Your ID:",fg='red').grid(row=3)
      identer = tk.Entry(top).grid(row=3,column=1)
      def publish():
-         global workerlist
-         global worker1
-         global worker2
-         global worker3
-         x = entry.get()
-         y = entryy.get()
-         identif = int(identer.get())
-         ix = int((identif))
-         if identif == workerlist[ix]:
+        #still trying to find out the correct way
              
 
 
